@@ -25,7 +25,7 @@ app = FastAPI()
 # can easily be accessed in the route handler - as metrics are often
 # created in a different module than where they are used.
 app.state.users_events_counter = Counter("events", "Number of events.")
-
+ 
 app.add_middleware(MetricsMiddleware)
 app.add_route("/metrics", metrics)
 
