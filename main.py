@@ -8,7 +8,7 @@ from aioprometheus import Counter, MetricsMiddleware
 from aioprometheus.asgi.starlette import metrics
 import logging
 
-
+   
 # setup loggers
 logging.config.fileConfig('logging.conf', disable_existing_loggers=False)
 
