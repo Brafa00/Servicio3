@@ -117,19 +117,18 @@
 		{
 			"name": "Get All Heroku",
 			"request": {
-				"method": "DELETE",
+				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/roleUsers/delete/1",
-					"protocol": "http",
+					"raw": "https://servicio3.herokuapp.com/roleUsers",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"servicio3",
+						"herokuapp",
+						"com"
 					],
-					"port": "8000",
 					"path": [
-						"roleUsers",
-						"delete",
-						"1"
+						"roleUsers"
 					]
 				}
 			},
@@ -138,19 +137,19 @@
 		{
 			"name": "Get Heroku By id",
 			"request": {
-				"method": "DELETE",
+				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/roleUsers/delete/1",
-					"protocol": "http",
+					"raw": "https://servicio3.herokuapp.com/roleUsers/2",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"servicio3",
+						"herokuapp",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"roleUsers",
-						"delete",
-						"1"
+						"2"
 					]
 				}
 			},
