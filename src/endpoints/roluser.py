@@ -22,14 +22,14 @@ router = APIRouter(
 
 @router.get("/")
 async def read_root():
-    url = 'https://6300f6cae71700618a320ab0.mockapi.io/roleUsers/roleUsers'
+    url = 'https://6300f9ebe71700618a3242c8.mockapi.io/roleUsers/roleUsers/'
     response = requests.get(url, {}, timeout=5)
     logger.info("Hola Rol usuarios")
     return {"encryptedToken": response.json() }
 
 @router.get("/{encryptedToken}")
 async def read_user(encryptedToken: str):
-    url = 'https://6300f6cae71700618a320ab0.mockapi.io/roleUsers/roleUsers'+encryptedToken
+    url = 'https://6300f9ebe71700618a3242c8.mockapi.io/roleUsers/roleUsers/'+encryptedToken
     response = requests.get(url, {}, timeout=5)
     if(response.status_code==  500):
      raise HTTPException(status_code=204, detail="Item not found")
@@ -39,7 +39,7 @@ async def read_user(encryptedToken: str):
 
 @router.post("/add")
 async def add_user(rol: RolUserModel):
-    url = 'https://6300f6cae71700618a320ab0.mockapi.io/roleUsers/rolUsers/'
+    url = 'https://6300f9ebe71700618a3242c8.mockapi.io/roleUsers/roleUsers/'
     data=json.loads(rol.json())
     response = requests.put(url, data = data, timeout=5)
     jsonresponse = json.loads(response.text)
@@ -48,7 +48,7 @@ async def add_user(rol: RolUserModel):
 
 @router.put("/update/{idUsuario}")
 async def read_user(rol: RolUserModel,encryptedToken: str):
-    url = 'https://6300f6cae71700618a320ab0.mockapi.io/roleUsers/rolUsers/'+encryptedToken
+    url = 'https://6300f9ebe71700618a3242c8.mockapi.io/roleUsers/roleUsers/'+encryptedToken
     data=json.loads(rol.json())
     response = requests.put(url, data = data, timeout=5)
     if(response.status_code==  404):
@@ -59,7 +59,7 @@ async def read_user(rol: RolUserModel,encryptedToken: str):
 
 @router.delete("/delete/{encryptedToken}")
 async def read_user(encryptedToken: str):
-    url = 'https://6300f3d19a1035c7f8fb507f.mockapi.io/rolUsers/rolUsers/'+encryptedToken
+    url = 'https://6300f9ebe71700618a3242c8.mockapi.io/roleUsers/roleUsers/'+encryptedToken
     response = requests.delete(url)
     if(response.status_code==  404):
      raise HTTPException(status_code=204, detail="Item not found")
