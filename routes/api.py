@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from src.endpoints import userinfo
+from src.endpoints import roluser
 
 router = APIRouter()
 
-router.include_router(userinfo.router)
+router.include_router(roluser.router)
