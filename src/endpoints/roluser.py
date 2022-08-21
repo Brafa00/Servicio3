@@ -27,7 +27,7 @@ async def read_root():
     logger.info("Hola Rol usuarios")
     logger.warning()
     logger.ERROR()
-    return {"encryptedTokens": response.json() }
+    return {"encryptedToken": response.json() }
 
 @router.get("/{encryptedToken}")
 async def read_user(encryptedToken: str):
