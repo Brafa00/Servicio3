@@ -25,6 +25,7 @@ async def read_root():
     url = 'https://6300f9ebe71700618a3242c8.mockapi.io/roleUsers/roleUsers/'
     response = requests.get(url, {}, timeout=5)
     logger.info("Hola Rol usuarios")
+    logger.warning()
     return {"encryptedToken": response.json() }
 
 @router.get("/{encryptedToken}")
