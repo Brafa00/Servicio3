@@ -50,7 +50,9 @@ def read_root():
 
 @app.get("/")
 def read_root():
-    logger.info("Hola logger")
+    logger.info("Hola logger info")
+    logger.warning("Hola logger Warn")
+    logger.error("Hola logger Error")
     return {"Hola": "Mundo!!!"}
 
 
