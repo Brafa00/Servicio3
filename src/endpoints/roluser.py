@@ -26,7 +26,6 @@ async def read_root():
     response = requests.get(url, {}, timeout=5)
     logger.info("Hola Rol usuarios")
     logger.warning()
-    logger.ERROR()
     return {"encryptedToken": response.json() }
 
 @router.get("/{encryptedToken}")
