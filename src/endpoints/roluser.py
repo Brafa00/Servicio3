@@ -24,7 +24,10 @@ router = APIRouter(
 async def read_root():
     url = 'https://6300f9ebe71700618a3242c8.mockapi.io/roleUsers/roleUsers/'
     response = requests.get(url, {}, timeout=5)
-    logger.info("Hola Rol usuarios")
+    logger.info("Hola logger usuarios rol")
+    logger.info("Hola logger info")
+    logger.warning("Hola logger Warn")
+    logger.error("Hola logger Error")
     return {"encryptedToken": response.json() }
 
 @router.get("/{encryptedToken}")
