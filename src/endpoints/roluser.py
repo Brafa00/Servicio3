@@ -44,7 +44,7 @@ async def read_user(encryptedToken: str):
 async def add_user(rol: RolUserModel):
     url = 'https://6300f9ebe71700618a3242c8.mockapi.io/roleUsers/roleUsers/'
     data=json.loads(rol.json())
-    response = requests.put(url, data = data, timeout=5)
+    response = requests.post(url, data = data, timeout=5)
     jsonresponse = json.loads(response.text)
     return jsonresponse
 
