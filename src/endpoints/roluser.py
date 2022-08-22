@@ -49,7 +49,7 @@ async def add_user(rol: RolUserModel):
     return jsonresponse
 
 
-@router.put("/update/{idUsuario}")
+@router.put("/update/{encryptedToken}")
 async def read_user(rol: RolUserModel,encryptedToken: str):
     url = 'https://6300f9ebe71700618a3242c8.mockapi.io/roleUsers/roleUsers/'+encryptedToken
     data=json.loads(rol.json())
