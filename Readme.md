@@ -71,6 +71,13 @@ Viste http://localhost:8000/metrics para ver las metricas
 
 Viste http://localhost:8000/roleUsers para ver la Api funcional
 
+Para ver los logs de las aplicacion debes instalar Heroku Cli y  ejecutar los sigueintes comandos
+
+```
+heroku login
+heroku logs --tail -a servicestaller
+```
+
 *Para ejecutar las pruebas unitarias con covertura:
 ```
 pytest 
