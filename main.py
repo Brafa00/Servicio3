@@ -54,7 +54,7 @@ def read_root():
     logger.info("Hola logger info")
     logger.warning("Hola logger Warn")
     logger.error("Hola logger Error")
-    return {"Hola": "Mundo!!!"}
+    return {"Hola": "Gente!!!"}
 
 
 @app.get("/items/{item_id}")
