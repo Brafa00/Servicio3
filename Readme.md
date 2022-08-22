@@ -75,7 +75,7 @@ Para ver los logs de las aplicacion debes instalar Heroku Cli y  ejecutar los si
 
 ```
 heroku login
-heroku logs --tail -a servicestaller
+heroku logs --tail -a servicio2
 ```
 
 *Para ejecutar las pruebas unitarias con covertura:
